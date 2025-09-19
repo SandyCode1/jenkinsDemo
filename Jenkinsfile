@@ -10,9 +10,9 @@ pipeline {
 
         stage('Deploy to AWS S3') {
             steps {
-                withAWS(credentials: 'your-aws-credentials-id', region: 'ap-south-1') {
+                withAWS(credentials: '9bec421a-2287-4cea-b192-56e525635dbc', region: 'ap-south-1') {
                     sh '''
-                        aws s3 sync . s3://your-bucket-name --delete
+                        aws s3 sync . s3://jenkinsdemo-negi --delete
                     '''
                 }
             }
